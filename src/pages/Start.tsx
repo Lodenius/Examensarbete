@@ -1,10 +1,10 @@
+import Header from "../components/Header";
 
 
 function StartPage() {
     return ( 
         <>
-
-            <h1>Hello</h1>
+            <Header />
         </>
      );
 }

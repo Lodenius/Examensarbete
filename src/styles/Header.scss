@@ -1,0 +1,16 @@
+@import './variables';
+
+header {
+    height: 9rem;
+    width: 100vw;
+    background-color: $deepBlue;
+    border-bottom: 1rem solid white;
+    position: absolute;
+    h1 {
+        text-align: center;
+        color: $ghostWhite;
+        letter-spacing: 1rem;
+        font-size: 3rem;
+        margin-top: -2rem;
+    }
+}
