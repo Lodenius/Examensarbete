@@ -1,14 +1,14 @@
 import Header from "../components/Header";
 
-function Calendar() {
+function Events() {
     return ( 
         <section>
                 <Header />
             <section>
-                <h1>CALENDAR</h1>
+                <h1>EVENTS</h1>
             </section>
         </section>
      );
 }
 
-export default Calendar;
+export default Events;

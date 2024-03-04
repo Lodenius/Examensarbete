@@ -41,7 +41,7 @@ const Menu = () => {
                    Start 
                 </motion.li>
               </NavLink>
-              <NavLink to='/rides'>
+              <NavLink to='/about'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
@@ -50,7 +50,7 @@ const Menu = () => {
                   About us 
                 </motion.li>
               </NavLink>
-              <NavLink to='/games'>
+              <NavLink to='/calendar'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
@@ -59,7 +59,7 @@ const Menu = () => {
                   Calendar 
                 </motion.li>
               </NavLink>
-              <NavLink to='/tickets'>
+              <NavLink to='/prices'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
@@ -68,13 +68,13 @@ const Menu = () => {
                   Prices 
                 </motion.li>
               </NavLink>
-              <NavLink to='/tickets'>
+              <NavLink to='/events'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Happenings 
+                  Events 
                 </motion.li>
               </NavLink>
             </motion.ul>

@@ -5,10 +5,8 @@ function Header() {
 
     return (
         <header>
+            <h1>STOCKHOLM BADMINTON</h1>
             <Menu />
-            <section>
-                <h1>STOCKHOLM BADMINTON</h1>
-            </section>
         </header>
     )
 }

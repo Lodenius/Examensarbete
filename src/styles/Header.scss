@@ -5,12 +5,11 @@ header {
     width: 100vw;
     background-color: $deepBlue;
     border-bottom: 1rem solid white;
-    position: absolute;
     h1 {
         text-align: center;
         color: $ghostWhite;
         letter-spacing: 1rem;
-        font-size: 3rem;
-        margin-top: -2rem;
+        font-size: 2.5rem;
+        padding-top: 2rem;
     }
 }
