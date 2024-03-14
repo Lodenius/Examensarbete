@@ -1,0 +1,46 @@
+@import './variables';
+
+.hero {
+    height: 40rem;
+    width: 100vw;
+    margin: auto;
+    background-image: url('../assets/imgs/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    h1 {
+        color: white;
+        font-size: 3rem;
+    }
+    h2 {
+        color: white;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
+.slides {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.start-info {
+    width: 70%;
+    margin: auto;
+    article {
+        padding-bottom: 2rem;
+    }
+    h3 {
+        color: $accentPink;
+        font-size: 2.3rem;
+        &::before {
+            content: url('../assets/icons/shuttlecock.svg');
+            height: 10px;
+        }
+    }
+}
