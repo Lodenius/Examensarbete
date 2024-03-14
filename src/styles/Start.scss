@@ -1,0 +1,47 @@
+@import './variables';
+
+.hero {
+    height: 40rem;
+    width: 100vw;
+    margin: auto;
+    background-image: url('../assets/imgs/hero-img.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    h1 {
+        color: white;
+        font-size: 3rem;
+    }
+    h2 {
+        color: white;
+        margin: 1rem 0 3rem 0;
+        font-size: 2rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
+.slides {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.start-info {
+    width: 70%;
+    margin: auto;
+    article {
+        padding-bottom: 2rem;
+    }
+    h3 {
+        color: $deepBlue;
+        font-size: 2.7rem;
+        margin: .3rem;
+    }
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}

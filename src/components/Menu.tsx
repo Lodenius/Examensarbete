@@ -47,7 +47,7 @@ const Menu = () => {
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  About us 
+                  Om oss 
                 </motion.li>
               </NavLink>
               <NavLink to='/calendar'>
@@ -56,7 +56,7 @@ const Menu = () => {
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Calendar 
+                  Boka 
                 </motion.li>
               </NavLink>
               <NavLink to='/prices'>
@@ -65,7 +65,7 @@ const Menu = () => {
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Prices 
+                  Priser 
                 </motion.li>
               </NavLink>
               <NavLink to='/events'>
@@ -74,7 +74,7 @@ const Menu = () => {
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Events 
+                  Event 
                 </motion.li>
               </NavLink>
             </motion.ul>
