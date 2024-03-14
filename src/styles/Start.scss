@@ -17,7 +17,7 @@
     }
     h2 {
         color: white;
-        margin-bottom: 2rem;
+        margin: 1rem 0 3rem 0;
         font-size: 2rem;
         font-weight: 300;
         font-style: italic;
@@ -36,11 +36,12 @@
         padding-bottom: 2rem;
     }
     h3 {
-        color: $accentPink;
-        font-size: 2.3rem;
-        &::before {
-            content: url('../assets/icons/shuttlecock.svg');
-            height: 10px;
-        }
+        color: $deepBlue;
+        font-size: 2.7rem;
+        margin: .3rem;
+    }
+    p {
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
 }

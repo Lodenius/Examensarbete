@@ -1,0 +1,39 @@
+@import './variables';
+
+footer {
+    height: 14rem;
+    width: 100vw;
+    background-color: $deepBlue;
+    border-top: 1rem solid white;
+    color: $ghostWhite;
+    display: grid;
+    grid-template-areas: 
+    ". adress . contact ."
+    ". . logo . .";
+    .adress {
+        margin-top: 2rem;
+        grid-area: adress;
+        text-align: center;
+        p:hover {
+            color: $accentPink;
+            cursor: pointer;
+        }
+    }
+    .logo-img {
+        grid-area: logo;
+        margin: auto;
+    }
+    .contact {
+        margin-top: 2rem;
+        grid-area: contact;
+        text-align: center;
+        &__icons {
+            img {
+                margin: .5rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
