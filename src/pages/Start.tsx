@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import Header from "../components/Header";
 import Footer from '../components/Footer';
 import '../styles/Start.scss';
+import InfoBox from '../components/InfoBox';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/scss';
@@ -22,7 +23,9 @@ import slide9 from '../assets/imgs/Blue5.png';
 import slide10 from '../assets/imgs/Black5.png';
 import slide11 from '../assets/imgs/Blue6.png';
 
-import shuttlecock from '../assets/icons/Motion-blue.svg'
+import shuttlecock from '../assets/icons/Motion-blue.svg';
+import infoBoxImg from '../assets/imgs/smallBlack.png';
+
 
 
 function StartPage() {
@@ -59,7 +62,7 @@ function StartPage() {
             <section className="slides">
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={400}
+                    spaceBetween={600}
                     autoplay={{delay: 3000,
                         disableOnInteraction: false,}}
                     modules={[Autoplay]}
@@ -173,6 +176,10 @@ function StartPage() {
                         som de har kul och lär sig nya färdigheter.
                     </p>
                 </article>
+                        <div></div>
+                <InfoBox 
+                imgUrl={infoBoxImg}
+                infoBoxText=''/>
             </main>
             <Footer />
         </section>

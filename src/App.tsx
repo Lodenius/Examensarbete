@@ -3,10 +3,10 @@ import StartPage from './pages/Start'
 import Prices from './pages/Prices'
 import About from './pages/About'
 import Booking from './pages/Booking'
-import Calendar from './pages/Calendar'
 import Events from './pages/Events'
+import NotFound from './pages/NotFound'
 
-function App() {
+const App: React.FC = () => {
 
   return (
     <BrowserRouter>
@@ -15,8 +15,8 @@ function App() {
         <Route path='/prices' element={<Prices />} />
         <Route path='/about' element={<About />} />
         <Route path='/booking' element={<Booking />} />
-        <Route path='/calendar' element={<Calendar />} />
         <Route path='/events' element={<Events />} />
+        <Route path='/notFound' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
