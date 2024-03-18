@@ -1,0 +1,60 @@
+@import './variables';
+
+.calendar {
+    padding: 3rem;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .6rem;
+      font-size: 1.4rem;
+      &--btn {
+        background-color: $accentPink;
+        width: 6rem;
+        margin: 0 .5rem;
+        padding: 1rem 0;
+        border: none;
+        border-radius: 1rem;
+        font-size: medium;
+        font-weight: 600;
+        &:hover {
+            cursor: pointer;
+        }
+      }
+    }
+    &__days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      &--header {
+        padding: .7rem;
+        text-align: center;
+        list-style: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+    }
+}
+  .day {
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid $deepBlue;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &:not(.past):hover {
+      background-color: $accentPink;
+      cursor: pointer;
+    }
+  }
+  
+  .day.selected {
+    background-color: $accentPink;
+    color: $ghostWhite;
+  }
+  
+  .day.disabled {
+    color: #ccc;
+  }
+  
+  .day.past {
+    color: #ccc;
+  }

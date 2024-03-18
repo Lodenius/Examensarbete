@@ -6,7 +6,6 @@ function Booking() {
         <section>
                 <Header />
             <section>
-                <h1>BOOKING</h1>
                 <CalendarView />
             </section>
         </section>

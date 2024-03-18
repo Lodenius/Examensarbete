@@ -1,41 +1,6 @@
-// // CalendarView.tsx
-// import React, { useState, useEffect } from 'react';
-// import { getAvailableTimeSlots } from './api'; // Funktion för att hämta tillgängliga tidsfönster från backend
-
-// const CalendarView: React.FC = () => {
-//   const [timeSlots, setTimeSlots] = useState<string[]>([]);
-
-//   useEffect(() => {
-//     const fetchTimeSlots = async () => {
-//       const availableSlots = await getAvailableTimeSlots();
-//       setTimeSlots(availableSlots);
-//     };
-//     fetchTimeSlots();
-//   }, []);
-
-//   const handleTimeSlotClick = (time: string) => {
-//     console.log('Valt tid: ', time);
-//   };
-
-//   return (
-//     <div>
-//       <h3>Välj en tid för att boka:</h3>
-//       <ul>
-//         {timeSlots.map((time, index) => (
-//           <li key={index} onClick={() => handleTimeSlotClick(time)}>
-//             {time}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default CalendarView;
-
-
+import '../styles/CalendarView.scss';
 import React, { useState } from 'react';
-import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay } from 'date-fns';
+import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, isBefore, isToday } from 'date-fns';
 
 interface CalendarProps {
   selectedDate: Date;
@@ -50,19 +15,37 @@ const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) =
   };
 
   const renderDays = () => {
+    const today = new Date();
     const monthStart = startOfMonth(currentDate);
     const monthEnd = endOfMonth(currentDate);
-    const startDate = startOfWeek(monthStart);
-    const endDate = endOfWeek(monthEnd);
+    const startDate = startOfWeek(monthStart, { weekStartsOn: 1 });
+    const endDate = endOfWeek(monthEnd, { weekStartsOn: 1 });
 
     const days = [];
     let day = startDate;
 
     while (day <= endDate) {
+      const isPastDate = isBefore(day, today);
+      const isSelected = isSameDay(day, selectedDate);
+      const isDisabled = !isSameMonth(day, monthStart);
+      const classNames = ['day'];
+
+      if (isSelected) {
+        classNames.push('selected');
+      }
+
+      if (isPastDate) {
+        classNames.push('past');
+      }
+
+      if (isDisabled) {
+        classNames.push('disabled');
+      }
+
       days.push(
         <div
           key={day.toString()}
-          className={`day ${!isSameMonth(day, monthStart) ? 'disabled' : ''} ${isSameDay(day, selectedDate) ? 'selected' : ''}`}
+          className={classNames.join(' ')}
           onClick={() => onDateClick(day)}
         >
           {format(day, 'd')}
@@ -75,22 +58,22 @@ const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) =
   };
 
   return (
-    <div className="calendar">
-      <div className="header">
-        <button onClick={() => setCurrentDate(addDays(currentDate, -7))}>Previous</button>
+    <section className="calendar">
+      <section className="calendar__header">
+        <button onClick={() => setCurrentDate(addDays(currentDate, -7))} className='calendar__header--btn'>Previous</button>
         <h2>{format(currentDate, 'MMMM yyyy')}</h2>
-        <button onClick={() => setCurrentDate(addDays(currentDate, 7))}>Next</button>
-      </div>
-      <div className="days">
-        {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-          <div key={day} className="day-header">
+        <button onClick={() => setCurrentDate(addDays(currentDate, 7))} className='calendar__header--btn'>Next</button>
+      </section>
+      <ul className="calendar__days">
+        {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
+          <li key={day} className="calendar__days--header">
             {day}
-          </div>
+          </li>
         ))}
         {renderDays()}
-      </div>
-    </div>
-  );
+      </ul>
+    </section>
+  );  
 };
 
 export default CalendarView;
