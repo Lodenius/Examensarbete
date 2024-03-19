@@ -12,7 +12,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({ infoBoxText, imgUrl }) => {
                 <img src={imgUrl} alt="" />
             </section>
             <section className='InfoBox__text'>
-                {infoBoxText}
+                <p>{infoBoxText}</p>
             </section>
         </article>
      );
