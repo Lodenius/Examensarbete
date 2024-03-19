@@ -9,16 +9,18 @@
       margin-bottom: .6rem;
       font-size: 1.4rem;
       &--btn {
-        background-color: $accentPink;
-        width: 6rem;
+        color: $accentPink;
+        background-color: $ghostWhite;
+        width: 7rem;
         margin: 0 .5rem;
         padding: 1rem 0;
         border: none;
-        border-radius: 1rem;
-        font-size: medium;
+        font-size: 1.2rem;
         font-weight: 600;
+        text-decoration: underline;
         &:hover {
             cursor: pointer;
+            color: $deepBlue;
         }
       }
     }
@@ -44,17 +46,14 @@
       background-color: $accentPink;
       cursor: pointer;
     }
-  }
-  
-  .day.selected {
-    background-color: $accentPink;
-    color: $ghostWhite;
-  }
-  
-  .day.disabled {
-    color: #ccc;
-  }
-  
-  .day.past {
-    color: #ccc;
+    &.selected {
+        background-color: $accentPink;
+        color: $ghostWhite;
+    }
+    &.disabled {
+        color: $icyBlue;
+    }
+    &.past {
+        color: $icyBlue;
+    }
   }
