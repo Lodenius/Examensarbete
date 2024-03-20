@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from "../components/Header";
