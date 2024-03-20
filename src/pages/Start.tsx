@@ -26,9 +26,6 @@ import slide11 from '../assets/imgs/Blue6.png';
 import shuttlecock from '../assets/icons/Motion-blue.svg';
 import infoBoxImg from '../assets/imgs/smallBlack.png';
 
-
-
-
 function StartPage() {
     const controls1 = useAnimation();
     const controls2 = useAnimation();
@@ -178,13 +175,16 @@ function StartPage() {
                     </p>
                 </article>
                         <div></div>
-                <InfoBox 
-                imgUrl={infoBoxImg}
-                infoBoxText='För att du ska kunna planera ditt besök på bästa sätt erbjuder vi en översikt över våra tider och priser nedan. 
-                Vi har ett brett utbud av tillgängliga tider för spel, vilket gör det enkelt för dig att hitta en passande tid för ditt schema. 
-                Våra priser är konkurrenskraftiga och vi strävar efter att erbjuda rimliga alternativ för alla. Om du vill veta mer om våra tillgängliga tider och priser, 
-                är du välkommen att klicka här för att läsa mer. Vi finns här för att besvara alla dina frågor och hjälpa dig att planera ditt nästa besök till vår anläggning. 
-                Vi ser fram emot att välkomna dig för en rolig och givande tid på badmintonbanan!'/>
+                        <InfoBox 
+                            title=''
+                            isReversed={true}
+                            imgUrl={infoBoxImg}
+                            infoBoxText='För att du ska kunna planera ditt besök på bästa sätt erbjuder vi en översikt över våra tider och priser nedan. 
+                            Vi har ett brett utbud av tillgängliga tider för spel, vilket gör det enkelt för dig att hitta en passande tid för ditt schema. 
+                            Våra priser är konkurrenskraftiga och vi strävar efter att erbjuda rimliga alternativ för alla. Om du vill veta mer om våra tillgängliga tider och priser, 
+                            är du välkommen att <a href="/prices">klicka här</a> för att läsa mer. Vi finns här för att besvara alla dina frågor och hjälpa dig att planera ditt nästa besök till vår anläggning. 
+                            Vi ser fram emot att välkomna dig för en rolig och givande tid på badmintonbanan!'
+                        />
             </main>
             <Footer />
         </section>

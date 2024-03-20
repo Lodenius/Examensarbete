@@ -1,21 +1,39 @@
 import '../styles/InfoBox.scss';
 
 type InfoBoxProps = {
+    title: string;
     infoBoxText: string;
     imgUrl: string;
+    isReversed: boolean;
 }
 
-const InfoBox: React.FC<InfoBoxProps> = ({ infoBoxText, imgUrl }) => {
+const InfoBox: React.FC<InfoBoxProps> = ({ title, infoBoxText, imgUrl, isReversed }) => {
     return ( 
         <article className='InfoBox'>
-            <section className='InfoBox__img'>
-                <img src={imgUrl} alt="" />
-            </section>
-            <section className='InfoBox__text'>
-                <p>{infoBoxText}</p>
-            </section>
+            {isReversed ? (
+                <>
+                    <section className='InfoBox__img'>
+                        <img src={imgUrl} alt="" />
+                    </section>
+                    <section className='InfoBox__text'>
+                        <h3>{title}</h3>
+                        <p dangerouslySetInnerHTML={{ __html: infoBoxText }} />
+                    </section>
+                </>
+            ) : (
+                <>
+                    <section className='InfoBox__text'>
+                        <h3>{title}</h3>
+                        <p dangerouslySetInnerHTML={{ __html: infoBoxText }} />
+                    </section>
+                    <section className='InfoBox__img'>
+                        <img src={imgUrl} alt="" />
+                    </section>
+                </>
+            )}
         </article>
      );
 }
 
 export default InfoBox;
+
