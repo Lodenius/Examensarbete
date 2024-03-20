@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import Header from "../components/Header";
 import Footer from '../components/Footer';
 import '../styles/Start.scss';
+import InfoBox from '../components/InfoBox';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/scss';
@@ -22,8 +23,8 @@ import slide9 from '../assets/imgs/Blue5.png';
 import slide10 from '../assets/imgs/Black5.png';
 import slide11 from '../assets/imgs/Blue6.png';
 
-import shuttlecock from '../assets/icons/Motion-blue.svg'
-
+import shuttlecock from '../assets/icons/Motion-blue.svg';
+import infoBoxImg from '../assets/imgs/smallBlack.png';
 
 function StartPage() {
     const controls1 = useAnimation();
@@ -59,7 +60,7 @@ function StartPage() {
             <section className="slides">
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={400}
+                    spaceBetween={600}
                     autoplay={{delay: 3000,
                         disableOnInteraction: false,}}
                     modules={[Autoplay]}
@@ -173,6 +174,17 @@ function StartPage() {
                         som de har kul och lär sig nya färdigheter.
                     </p>
                 </article>
+                        <div></div>
+                        <InfoBox 
+                            title=''
+                            isReversed={true}
+                            imgUrl={infoBoxImg}
+                            infoBoxText='För att du ska kunna planera ditt besök på bästa sätt erbjuder vi en översikt över våra tider och priser nedan. 
+                            Vi har ett brett utbud av tillgängliga tider för spel, vilket gör det enkelt för dig att hitta en passande tid för ditt schema. 
+                            Våra priser är konkurrenskraftiga och vi strävar efter att erbjuda rimliga alternativ för alla. Om du vill veta mer om våra tillgängliga tider och priser, 
+                            är du välkommen att <a href="/prices">klicka här</a> för att läsa mer. Vi finns här för att besvara alla dina frågor och hjälpa dig att planera ditt nästa besök till vår anläggning. 
+                            Vi ser fram emot att välkomna dig för en rolig och givande tid på badmintonbanan!'
+                        />
             </main>
             <Footer />
         </section>

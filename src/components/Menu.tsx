@@ -50,15 +50,7 @@ const Menu = () => {
                   Om oss 
                 </motion.li>
               </NavLink>
-              <NavLink to='/calendar'>
-                <motion.li
-                  initial={{ x: -10 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: 0 }}
-                  >
-                  Boka 
-                </motion.li>
-              </NavLink>
+
               <NavLink to='/prices'>
                 <motion.li
                   initial={{ x: -10 }}
@@ -66,6 +58,15 @@ const Menu = () => {
                   transition={{ duration: 0.5, delay: 0 }}
                   >
                   Priser 
+                </motion.li>
+              </NavLink>              
+              <NavLink to='/booking'>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 0 }}
+                  >
+                  Boka 
                 </motion.li>
               </NavLink>
               <NavLink to='/events'>

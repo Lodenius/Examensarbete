@@ -5,6 +5,8 @@
 @import 'Header';
 @import 'Menu';
 @import 'Start';
+@import 'InfoBox';
+@import 'Prices';
 
 html {
     box-sizing: border-box;
@@ -20,4 +22,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: $ghostWhite;
+}
+
+a {
+    color: $accentPink;
 }
