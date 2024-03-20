@@ -59,7 +59,7 @@ function StartPage() {
             <section className="slides">
                 <Swiper
                     slidesPerView={3}
-                    spaceBetween={600}
+                    spaceBetween={50}
                     autoplay={{delay: 3000,
                         disableOnInteraction: false,}}
                     modules={[Autoplay]}

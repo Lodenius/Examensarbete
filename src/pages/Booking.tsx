@@ -1,4 +1,5 @@
 import CalendarView from "../components/CalendarView";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 
@@ -11,6 +12,7 @@ function Booking() {
             <section>
                 <CalendarView />
             </section>
+            <Footer />
         </section>
     );
 }

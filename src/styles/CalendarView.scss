@@ -1,7 +1,9 @@
 @import './variables';
 
 .calendar {
-    padding: 3rem;
+    padding: 3rem 0;
+    width: 80%;
+    margin: auto;
     &__header {
       display: flex;
       justify-content: space-between;
@@ -12,12 +14,12 @@
         color: $accentPink;
         background-color: $ghostWhite;
         width: 7rem;
-        margin: 0 .5rem;
         padding: 1rem 0;
         border: none;
         font-size: 1.2rem;
         font-weight: 600;
         text-decoration: underline;
+        text-align: end;
         &:hover {
             cursor: pointer;
             color: $deepBlue;
