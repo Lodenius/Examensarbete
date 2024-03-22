@@ -1,0 +1,58 @@
+@import './variables';
+
+.BookingForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 2rem;
+    .ErrorMessage {
+      color: $accentPink;
+      margin-bottom: .6rem;
+    }
+    &__info {
+        width: 40%;
+    }
+
+    article {
+      margin-bottom: .5rem;
+    }
+  
+    input[type="date"],
+    input[type="text"],
+    select {
+      padding: .5rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px; 
+      margin-top: .3rem;
+      &::placeholder {
+        color: $icyBlue;
+      }
+    }
+
+    label {
+        font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        color: $deepBlue;
+    }
+    
+    button {
+      padding: .6rem 1.25rem;
+      background-color: $accentPink;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:disabled {
+        background-color: $ghostWhite;
+        color: $icyBlue;
+        border: 1px solid $icyBlue;
+        cursor: not-allowed;
+      }
+    }
+  }

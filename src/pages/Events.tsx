@@ -74,7 +74,7 @@ function Events() {
                     <section className="slides">
                     <Swiper
                         slidesPerView={3}
-                        spaceBetween={350}
+                        spaceBetween={450}
                         autoplay={{delay: 3000,
                             disableOnInteraction: false,}}
                         modules={[Autoplay]}
@@ -132,7 +132,7 @@ function Events() {
                     <section className="slides">
                     <Swiper
                         slidesPerView={3}
-                        spaceBetween={350}
+                        spaceBetween={450}
                         autoplay={{delay: 3000,
                             disableOnInteraction: false,}}
                         modules={[Autoplay]}

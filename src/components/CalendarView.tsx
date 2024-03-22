@@ -1,6 +1,7 @@
 import '../styles/CalendarView.scss';
 import React, { useState } from 'react';
-import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, isBefore, isToday } from 'date-fns';
+import BookingModal from './BookingModal';
+import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, isBefore } from 'date-fns';
 
 interface CalendarProps {
   selectedDate: Date;
@@ -9,9 +10,21 @@ interface CalendarProps {
 
 const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) => {
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const onDateClick = (day: Date) => {
-    onSelectDate(day);
+  const handleSelectDate = (date: Date) => {
+    onSelectDate(date);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSelectTime = (time: string) => {
+    // Implementera logik för att hantera den valda tiden här
+    console.log('Vald tid:', time);
+    handleCloseModal();
   };
 
   const renderDays = () => {
@@ -20,41 +33,40 @@ const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) =
     const monthEnd = endOfMonth(currentDate);
     const startDate = startOfWeek(monthStart, { weekStartsOn: 1 });
     const endDate = endOfWeek(monthEnd, { weekStartsOn: 1 });
-  
+
     const days = [];
     let day = startDate;
-  
+
     while (day <= endDate) {
-      const isTodayDate = isToday(day);
-      const isPastDate = isBefore(day, today) && !isTodayDate;
+      const isPastDate = isBefore(day, today);
       const isSelected = isSameDay(day, selectedDate);
       const isDisabled = !isSameMonth(day, monthStart);
       const classNames = ['day'];
-  
+
       if (isSelected) {
         classNames.push('selected');
       }
-  
+
       if (isPastDate) {
         classNames.push('past');
       }
-  
+
       if (isDisabled) {
         classNames.push('disabled');
       }
-  
+
       days.push(
         <div
           key={day.toString()}
           className={classNames.join(' ')}
-          onClick={() => onDateClick(day)}
+          onClick={() => handleSelectDate(day)}
         >
           {format(day, 'd')}
         </div>
       );
       day = addDays(day, 1);
     }
-  
+
     return days;
   };
 
@@ -73,6 +85,7 @@ const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) =
         ))}
         {renderDays()}
       </ul>
+      <BookingModal isOpen={isModalOpen} onClose={handleCloseModal} onSelectTime={handleSelectTime} selectedDate={selectedDate} />
     </section>
   );  
 };
