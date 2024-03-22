@@ -37,10 +37,12 @@
       cursor: pointer;
       color: $accentPink;
       border: none;
-      text-decoration: underline;
       background-color: $ghostWhite;
-      font-size: 1.2rem;
+      font-size: .9rem;
       margin-top: auto;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

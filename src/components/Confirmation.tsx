@@ -19,7 +19,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({ date, time, name, phoneNumb
                 <p><strong>Tid:</strong> {time}</p>
                 <p><strong>Namn:</strong> {name}</p>
                 <p><strong>Telefonnummer:</strong> {phoneNumber}</p>
-                <button className="confirmation__info--close" onClick={closeModal}>Stäng</button>
+                <button className="confirmation__info--close" onClick={closeModal}>Bekräfta och stäng</button>
             </section>
         </article>
     );

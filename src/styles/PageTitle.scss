@@ -4,11 +4,12 @@
 
 .page-title {
     margin-bottom: 2rem;
-    &__title{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: .5rem;
+    &__title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+        color: $deepBlue;
     }
     &__underline {
         width: 80%;

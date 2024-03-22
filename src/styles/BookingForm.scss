@@ -45,10 +45,12 @@
       border-radius: 5px;
       cursor: pointer;
       margin: 2rem;
+      &:hover {
+        text-decoration: underline;
+      }
       &:disabled {
         background-color: $ghostWhite;
         color: $icyBlue;
-        text-decoration: underline;
         border: 1px solid $icyBlue;
         cursor: not-allowed;
       }

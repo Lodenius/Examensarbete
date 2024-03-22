@@ -10,6 +10,13 @@ footer {
     grid-template-areas: 
     ". adress . contact ."
     ". . logo . .";
+    h3 {
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: .85rem;
+        margin-top: .4rem;
+    }
     h4 {
         color: $accentPink;
         font-family: "Roboto", sans-serif;
