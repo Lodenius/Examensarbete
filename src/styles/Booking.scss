@@ -1,0 +1,11 @@
+@import './variables';
+
+.Booking {
+    display: flex;
+    flex-direction: column;
+
+    &__info {
+      width: 80%;
+      margin: auto;
+    }
+  }
