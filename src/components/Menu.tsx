@@ -41,40 +41,41 @@ const Menu = () => {
                    Start 
                 </motion.li>
               </NavLink>
-              <NavLink to='/rides'>
+              <NavLink to='/about'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  About us 
+                  Om oss 
                 </motion.li>
               </NavLink>
-              <NavLink to='/games'>
+
+              <NavLink to='/prices'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Calendar 
+                  Priser 
+                </motion.li>
+              </NavLink>              
+              <NavLink to='/booking'>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 0 }}
+                  >
+                  Boka 
                 </motion.li>
               </NavLink>
-              <NavLink to='/tickets'>
+              <NavLink to='/events'>
                 <motion.li
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 0 }}
                   >
-                  Prices 
-                </motion.li>
-              </NavLink>
-              <NavLink to='/tickets'>
-                <motion.li
-                  initial={{ x: -10 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: 0 }}
-                  >
-                  Happenings 
+                  Event 
                 </motion.li>
               </NavLink>
             </motion.ul>

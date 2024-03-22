@@ -1,6 +1,7 @@
 @import './variables';
 
 .menu {
+    margin-top: -3rem;
         &__toggleButton {
             border: none;
             cursor: pointer;
@@ -27,15 +28,13 @@
             justify-content: space-around;
             li {
                 color: $ghostWhite;
-                padding-top: .5rem;
-                font-size: 1.25rem;
-                font-weight: 300;
-                letter-spacing: 1px;
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                &:hover {
+                    text-decoration: underline;
+                    color: $accentPink;
+                }
             }
         }
     }
-
-  li:hover {
-    text-decoration: underline;
-}
-

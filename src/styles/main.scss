@@ -1,5 +1,12 @@
-@import "variables";
-@import "typography";
+@import 'variables';
+@import 'typography';
+@import 'About';
+@import 'Footer';
+@import 'Header';
+@import 'Menu';
+@import 'Start';
+@import 'InfoBox';
+@import 'Prices';
 
 html {
     box-sizing: border-box;
@@ -8,10 +15,15 @@ html {
 
 *, *::after, *::before {
     box-sizing: inherit;
+    margin: 0;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: $ghostWhite;
+}
+
+a {
+    color: $accentPink;
 }

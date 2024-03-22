@@ -1,0 +1,56 @@
+@import './variables';
+
+.about-headline {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    &--line {
+            width: 80%;
+            height: .15rem;
+            background-color: $accentPink;
+            margin: auto;
+    }
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    h2 {
+        color: $deepBlue;
+    }
+    div {
+        width: 100%;
+        height: .15rem;
+        background-color: $accentPink;
+        margin: 5rem 0;
+    }
+    &__find {
+        display: flex;
+        &--info {
+            p {
+                padding: 1rem;
+            }
+        }
+        &--map {
+            height: 15rem;
+        }
+    }
+    &__contact {
+        p {
+            padding: 1rem;
+        }  
+    }
+    &__small-info {
+        p {
+            margin: 1rem 0;
+        }
+    }
+}
+
+.img {
+    height: 1.8rem;
+}
