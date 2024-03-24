@@ -1,8 +1,6 @@
 import '../styles/Header.scss';
 import Menu from './Menu';
 
-import logo from '../assets/imgs/title-logo.png';
-
 function Header() {
 
     return (
