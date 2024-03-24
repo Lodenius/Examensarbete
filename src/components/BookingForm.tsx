@@ -16,7 +16,6 @@ const BookingForm: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false);
 
     const handleBooking = () => {
-        console.log('Handle booking function is called');
         if (name !== '' && phoneNumber !== '' && date !== '' && time !== '') {
           dispatch(confirmBooking(name, phoneNumber));
           dispatch(bookTimeSlot(date, time));

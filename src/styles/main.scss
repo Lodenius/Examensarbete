@@ -1,12 +1,19 @@
 @import 'variables';
 @import 'typography';
 @import 'About';
+@import 'Booking';
+@import 'BookingForm';
+@import 'CalendarView';
+@import 'Confirmation';
+@import 'Events';
 @import 'Footer';
 @import 'Header';
-@import 'Menu';
-@import 'Start';
 @import 'InfoBox';
+@import 'Menu';
+@import 'PageTitle';
 @import 'Prices';
+@import 'Start';
+
 
 html {
     box-sizing: border-box;

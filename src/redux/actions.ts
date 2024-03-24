@@ -1,5 +1,3 @@
-// bookingActions.ts
-
 import { BOOK_TIME_SLOT, CONFIRM_BOOKING } from './actionTypes';
 
 export const bookTimeSlot = (date: string, time: string) => ({
