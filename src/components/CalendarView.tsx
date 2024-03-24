@@ -22,7 +22,6 @@ const CalendarView: React.FC<CalendarProps> = ({ selectedDate, onSelectDate }) =
   };
 
   const handleSelectTime = (time: string) => {
-    // Implementera logik för att hantera den valda tiden här
     console.log('Vald tid:', time);
     handleCloseModal();
   };

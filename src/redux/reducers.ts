@@ -1,5 +1,3 @@
-// bookingReducer.ts
-
 import { BOOK_TIME_SLOT, CONFIRM_BOOKING } from './actionTypes';
 
 interface BookingState {
