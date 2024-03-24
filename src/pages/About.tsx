@@ -13,7 +13,7 @@ import shuttlecock from '../assets/icons/Motion-blue.svg';
 import map from '../assets/imgs/Map.png';
 import tracks from '../assets/imgs/Track.png';
 import shop from '../assets/imgs/Shop.png';
-import cafe from '../assets/imgs/Café.png';
+import cafe from '../assets/imgs/Cafe.png';
 import pingpong from '../assets/imgs/TableTennis.png';
 
 function About() {
