@@ -9,4 +9,3 @@ export const confirmBooking = (name: string, phoneNumber: string) => ({
   type: CONFIRM_BOOKING,
   payload: { name, phoneNumber },
 });
-

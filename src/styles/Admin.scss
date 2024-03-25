@@ -1,0 +1,16 @@
+@import './variables';
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Gör sidans höjd minst lika hög som webbläsarfönstret */
+  
+    &__bookings {
+      flex: 1; /* Huvudinnehållet tar upp så mycket utrymme som möjligt */
+    }
+  
+    footer {
+      margin-top: auto; /* Placera footern längst ner */
+    }
+  }
+  

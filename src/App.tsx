@@ -4,7 +4,7 @@ import Prices from './pages/Prices'
 import About from './pages/About'
 import Booking from './pages/Booking'
 import Events from './pages/Events'
-import NotFound from './pages/NotFound'
+import Admin from './pages/Admin'
 
 const App: React.FC = () => {
 
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <Route path='/about' element={<About />} />
         <Route path='/booking' element={<Booking />} />
         <Route path='/events' element={<Events />} />
-        <Route path='/notFound' element={<NotFound />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
     </BrowserRouter>
   )
