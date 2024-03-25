@@ -24,6 +24,7 @@ import slide11 from '../assets/imgs/Blue6.png';
 
 import shuttlecock from '../assets/icons/Motion-blue.svg';
 import infoBoxImg from '../assets/imgs/smallBlack.png';
+import OpenTimes from '../components/OpenTimes';
 
 function StartPage() {
     const controls1 = useAnimation();

@@ -2,28 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { bookTimeSlot, confirmBooking } from '../redux/actions';
 import Confirmation from './Confirmation';
+import { formatPhoneNumber } from './NumberFormat';
 import '../styles/BookingForm.scss';
 
 const allowedTimes = ['09:00', '10:00', '11:00', '12:00', '14:00', '15:30', '16:00', '16:30', '17:00', '19:00', '20:00', '21:00', '21:30', '22:00'];
-
-const formatPhoneNumber = (phoneNumber: string): string => {
-    const cleaned: string = phoneNumber.replace(/\D/g, '');
-    console.log('Cleaned Phone Number:', cleaned); // Logga det rensade telefonnumret
-
-    const match: RegExpMatchArray | null = cleaned.match(/^(\d{3})(\d{3})(\d{2})(\d{2})$/);
-    console.log('Match:', match); // Logga matchningen
-
-    if (match) {
-        console.log('Match Group 1:', match[1]); // Logga matchgrupp 1
-        console.log('Match Group 2:', match[2]); // Logga matchgrupp 2
-        console.log('Match Group 3:', match[3]); // Logga matchgrupp 3
-        console.log('Match Group 4:', match[4]); // Logga matchgrupp 4
-
-        return `${match[1]}-${match[2]} ${match[3]} ${match[4]}`;
-    }
-    return phoneNumber;
-};
-
 
 const BookingForm: React.FC = () => {
     const dispatch = useDispatch();

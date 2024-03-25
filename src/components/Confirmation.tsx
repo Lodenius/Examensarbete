@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Confirmation.scss';
+import { formatPhoneNumber } from './NumberFormat';
+
 
 interface ConfirmationProps {
     date: string;
@@ -18,7 +20,7 @@ const Confirmation: React.FC<ConfirmationProps> = ({ date, time, name, phoneNumb
                 <p><strong>Datum:</strong> {date}</p>
                 <p><strong>Tid:</strong> {time}</p>
                 <p><strong>Namn:</strong> {name}</p>
-                <p><strong>Telefonnummer:</strong> {phoneNumber}</p>
+                <p><strong>Telefonnummer:</strong> {formatPhoneNumber(phoneNumber)}</p>
                 <button className="confirmation__info--close" onClick={closeModal}>Bekräfta och stäng</button>
             </section>
         </article>

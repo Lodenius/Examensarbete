@@ -15,6 +15,7 @@ import tracks from '../assets/imgs/Track.png';
 import shop from '../assets/imgs/Shop.png';
 import cafe from '../assets/imgs/Cafe.png';
 import pingpong from '../assets/imgs/TableTennis.png';
+import OpenTimes from '../components/OpenTimes';
 
 function About() {
     const controls1 = useAnimation();
@@ -35,6 +36,7 @@ function About() {
                 <PageTitle 
                 PageTitle='Om oss på Stockholm Badminton'/>
             <section className="about">
+                <OpenTimes />
                 <section className="about__info">
                     <InfoBox 
                     title=''
