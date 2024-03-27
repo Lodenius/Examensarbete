@@ -53,8 +53,8 @@ function StartPage() {
         <section>
                 <Header />
             <section className="hero">
-                <h1>Välkommen till Stockholm Badmintion</h1>
-                <h2>Bästa badmintonhallen finns på Södermalm.</h2>
+                <h1>Välkommen till Stockholm Badminton</h1>
+                <h2>Den bästa badmintonhallen finns på Södermalm.</h2>
             </section>
             <section className="slides">
                 <Swiper
